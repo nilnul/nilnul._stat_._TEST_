@@ -13,11 +13,11 @@ namespace nilnul._stat_._TEST_.dist.sample.regress_.linear_.simple
 		public void TestMethod1()
 		{
 			//var samples = nilnul.blob_.excel.doc.sheet.Dwelt._Create()
-			var samples = nilnul.blob_.csv_.cannonized._OnTblX.ImportFromBlob(
+			var samples = nilnul.blob_.csv_.canonic._AsTblX.ImportFromBlob(
 				_test.Resource1.data
 			);
 
-			var r = nilnul.stat.dist.sample.regress_.linear_._SimpleX.Regress(
+			var r = nilnul.stat.dist.survey.regress_.linear_._SimpleX.Regress(
 				samples.Rows.Cast<DataRow>().Select(r1=> ( double.Parse( r1[0].ToString() ), double.Parse( r1[1].ToString() ) ) )
 			);
 

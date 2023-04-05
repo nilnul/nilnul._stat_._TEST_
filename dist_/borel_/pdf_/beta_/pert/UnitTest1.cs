@@ -94,7 +94,7 @@ namespace nilnul._stat_._TEST_.dist_.borel_.beta_.pert
 
 
 			var scores=modes.Select(
-				m=> new nilnul.stat.dist_.borel_._beta.generalized_.Pert(0, m, 100).inverseCdf(
+				m=> new nilnul.stat.dist_.borel_.pdf_.beta_.Pert4dbl(0, m, 100).inverseCdf(
 					random.NextDouble()
 				)/100*(max-min)+min
 			);
@@ -105,7 +105,7 @@ namespace nilnul._stat_._TEST_.dist_.borel_.beta_.pert
 
 
 
-			var dist = new nilnul.stat.dist_.borel_._beta.generalized_.Pert(85, 93, 100);
+			var dist = new nilnul.stat.dist_.borel_.pdf_.beta_.Pert4dbl(85, 93, 100);
 
 			var sampled1= dist.inverseCdf(
 				random.NextDouble()

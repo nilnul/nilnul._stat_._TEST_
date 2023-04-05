@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Linq;
 
-namespace nilnul._stat_._TEST_.dist_.borel.samples_.avgGiven
+namespace nilnul._stat_._TEST_.dist_.borel_.boundaried.samples_.counted_.aim_.avg_
 {
 	[TestClass]
 	public class UnitTest1
@@ -13,10 +13,12 @@ namespace nilnul._stat_._TEST_.dist_.borel.samples_.avgGiven
 		[Obsolete()]
 		public void ContinuumSample_boundSum_RandomizeNormalize()
 		{
-			var avg = 37;
 
+			var avg = 38.7;
 
-			var x = nilnul.stat.dist_.borel.samples_.avgGiven_._RandomizeThenNormalizeX._Arr(35, 36.3, 36.8, 36.5 );
+			var x = nilnul.stat.dist_.borel_.boundaried.survey_.counted_.aim_.avg_._RandomizeThenNormalizeX._Arr(
+				5, 36.3, 41.8, avg
+			);
 
 			Debug.WriteLine(
 				string.Join(
@@ -25,7 +27,14 @@ namespace nilnul._stat_._TEST_.dist_.borel.samples_.avgGiven
 				)
 			);
 
-		}
+			Assert.IsTrue(
+				nilnul.num.real.re_.approx_.PerKilo4Dbl.Singleton.re(
+					x.Average()
+					,
+					avg
+				)
+			);
 
+		}
 	}
 }

@@ -13,10 +13,10 @@ namespace nilnul.prob._test.prob_.finite.binomial
 		public void Binomial()
 		{
 
-			var dist = nilnul.prob_.finite_.Binomial.Create(
+			var dist = nilnul.stat.dist_.finite_.cmf_.Binomial.Create(
 				
 				4, 
-				new nilnul.num._quotient.fraction.op.Simplify.Ed1(2,3)
+				new num.quotient_.DenomNonnil(2,3)
 			);
 
 			var m=dist.measure(3);

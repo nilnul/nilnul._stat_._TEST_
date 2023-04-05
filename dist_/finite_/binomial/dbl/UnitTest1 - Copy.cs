@@ -13,7 +13,7 @@ namespace nilnul.prob._test.prob_.finite.binomial
 		public void BinomialDbl()
 		{
 
-			var dist = new nilnul.stat.dist_.finite_.binomial_.IsofeasibleDbl(
+			var dist = new nilnul.stat.dist_.finite_.cmf_.binomial_.IsofeasibleDbl(
 				
 				4
 			);
