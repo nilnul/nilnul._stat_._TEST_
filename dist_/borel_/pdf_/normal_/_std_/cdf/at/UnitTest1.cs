@@ -11,7 +11,7 @@ namespace nilnul._stat_._TEST_.nilnul0.dist_.borel_.pdf_.normal_._std_.cdf.at
 
 		static public void V(double x, double result)
 		{
-			var t = nilnul.stat.dist_.borel_.pdf_.normal_._std_.CdfByErf4Dbl.OfThousandth();
+			var t = nilnul.stat.dist_.borel_.pdfable_.normal_._std_.CdfByErf4Dbl.OfThousandth();
 
 			Assert.IsTrue(
 

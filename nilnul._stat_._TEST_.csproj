@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props" Condition="Exists('..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props')" />
   <Import Project="packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props" Condition="Exists('packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props')" />
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -89,8 +90,8 @@
     <Reference Include="AE.Net.Mail, Version=1.7.7816.38666, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
     </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.19.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
-      <HintPath>packages\DocumentFormat.OpenXml.2.19.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\DocumentFormat.OpenXml.2.20.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
@@ -101,119 +102,128 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\MathNet.Numerics.Signed.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\MSTest.TestFramework.3.0.2\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <HintPath>..\..\.deps\MSTest.TestFramework.3.0.4\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\MSTest.TestFramework.3.0.2\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <HintPath>..\..\.deps\MSTest.TestFramework.3.0.4\lib\net462\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.blob_._excel_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.blob_._excel_._LIB_.1.1.230321.171520-sym\lib\net481\nilnul.blob_._excel_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.blob_._excel_._LIB_.1.1.230611.43458-sym\lib\net481\nilnul.blob_._excel_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul.collection_._discrete_._LIB_.1.1.220728.140313\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.collection_._discrete_._LIB_.1.1.230611.40617-sym\lib\net481\nilnul.collection_._discrete_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.geometry._planar_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul.geometry._planar_._LIB_.1.1.220815.32404\lib\net48\nilnul.geometry._planar_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.geometry._planar_._LIB_.1.1.230621.120911-sym\lib\net481\nilnul.geometry._planar_._LIB_.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nilnul.math._calculus_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.math._calculus_._LIB_.1.1.230330.184447-sym\lib\net481\nilnul.math._calculus_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.math._calculus_._LIB_.1.1.230603.171913-sym\lib\net481\nilnul.math._calculus_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul.num.real._func_._LIB_.1.1.230316.155248-sym\lib\net481\nilnul.num.real._func_._LIB_.dll</HintPath>
+    <Reference Include="nilnul.num.real._func_._LIB_,Version=1.1.230507.144737-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num.real._func_._LIB_.1.1.230507.144737-sym\lib\net481\nilnul.num.real._func_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num.real._matrix_._LIB_.1.1.230328.42932-sym\lib\net481\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+    <Reference Include="nilnul.num.real._matrix_._LIB_,Version=1.1.230509.153304-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num.real._matrix_._LIB_.1.1.230509.153304-sym\lib\net481\nilnul.num.real._matrix_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num._complex_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul.num._complex_._LIB_.1.1.220731.183914\lib\net48\nilnul.num._complex_._LIB_.dll</HintPath>
+    <Reference Include="nilnul.num._complex_._LIB_,Version=1.1.230517.130110-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num._complex_._LIB_.1.1.230517.130110-sym\lib\net481\nilnul.num._complex_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.230402.101933-sym\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
+    <Reference Include="nilnul.num._integer_._LIB_,Version=1.1.230515.93530-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num._integer_._LIB_.1.1.230515.93530-sym\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.230401.163801-sym\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.230531.94846-sym\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.230405.73423-sym\lib\net481\nilnul.num._real_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.230706.40037-sym\lib\net481\nilnul.num._real_._LIB_.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._acc_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._acc_._LIB_,Version=2.1.220731.182834, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._acc_._LIB_.2.1.220731.182834\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._acc_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._acc_._LINQ_,Version=1.1.220731.182834, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._acc_._LINQ_.1.1.220731.182834\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._app_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._app_._LIB_.1.1.230322.111738-sym\lib\net481\nilnul._app_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._app_._LIB_,Version=1.1.230506.102031-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._app_._LIB_.1.1.230506.102031-sym\lib\net481\nilnul._app_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.230402.92104-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._bit_._LIB_,Version=1.1.230415.233652-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._bit_._LIB_.1.1.230415.233652-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._character_._LIB_, Version=2.1.8387.39356, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.230404.120950-sym\lib\net481\nilnul._character_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._character_._LIB_,Version=2.1.230408.121401-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._character_._LIB_.2.1.230408.121401-sym\lib\net481\nilnul._character_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._comm_._LIB_, Version=1.0.7827.34092, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._comm_._LIB_.1.0.7827.34092\lib\net48\nilnul._comm_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._email_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._email_._LIB_,Version=1.1.220917.102117, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._email_._LIB_.1.1.220917.102117\lib\net481\nilnul._email_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._fs_._LIB_.2.1.230118.82646-sym\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._fs_._LIB_.2.1.230630.144714-sym\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <!--<Reference Include="nilnul._geometry_._LIB_, Version=1.0.8051.600, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <HintPath>packages\nilnul._geometry_._LIB_.1.0.8051.600\lib\net48\nilnul._geometry_._LIB_.dll</HintPath>
 </Reference>-->
-    <Reference Include="nilnul._human_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._human_._LIB_,Version=1.1.220725.151533, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._human_._LIB_.1.1.220725.151533\lib\net48\nilnul._human_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._human_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._human_._LINQ_,Version=1.1.220725.150847, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._human_._LINQ_.1.1.220725.150847\lib\net48\nilnul._human_._LINQ_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._linq_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._linq_._LIB_,Version=1.1.220906.140610, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._linq_._LIB_.1.1.220906.140610\lib\net481\nilnul._linq_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.230404.164936-sym\lib\net481\nilnul._num_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.230522.92555-sym\lib\net481\nilnul._num_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._num_._LINQ_.1.1.230404.125713-sym\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
+    <Reference Include="nilnul._num_._LINQ_,Version=1.1.230419.172425-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._num_._LINQ_.1.1.230419.172425-sym\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.230403.64636-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.230623.10954-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._os_._LIB4FX_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._os_._LIB4FX_.1.0.230111.120633-sym\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
+    <Reference Include="nilnul._os_._LIB4FX_,Version=1.0.230111.120633-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._os_._LIB4FX_.1.0.230111.120633-sym\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.230318.123603-sym\lib\net481\nilnul._rel_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.230617.144331-sym\lib\net481\nilnul._rel_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.230321.135854-sym\lib\net481\nilnul._set_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.230615.145110-sym\lib\net481\nilnul._set_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.230319.90029-sym\lib\net481\nilnul._time_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._time_._LIB_,Version=1.1.230319.90029-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._time_._LIB_.1.1.230319.90029-sym\lib\net481\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._txt_._LIB_.1.1.230107.122025-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.230630.121127-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nilnul._web_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._web_._LIB_.1.1.230219.84309-sym\lib\net481\nilnul._web_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._web_._LIB_.1.1.230701.165201-sym\lib\net481\nilnul._web_._LIB_.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._win_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._win_._LIB_,Version=1.1.221219.174250, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._win_._LIB_.1.1.221219.174250\lib\net481\nilnul._win_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._xml_._LIB_,Version=1.1.221119.43115, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._xml_._LIB_.1.1.221119.43115\lib\net481\nilnul._xml_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="sergeyBochkanov._alglib_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\sergeyBochkanov._alglib_._LIB_.1.1.230326.60817-sym\lib\net481\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\sergeyBochkanov._alglib_._LIB_.1.1.230603.171914-sym\lib\net481\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -252,8 +262,8 @@
     <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\System.Threading.Tasks.Extensions.4.6.0-preview.18571.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -273,10 +283,10 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
-    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\_nilnul_._LIB_.1.1.230219.83348-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    <Reference Include="_nilnul_._LIB_,Version=1.1.230415.182959-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LIB_.1.1.230415.182959-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="_nilnul_._LINQ_,Version=1.1.230219.73454-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\_nilnul_._LINQ_.1.1.230219.73454-sym\lib\net481\_nilnul_._LINQ_.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -287,9 +297,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="dist_\borel_\boundaried\samples_\counted_\aim_\avg_\UnitTest1.cs" />
     <Compile Include="dist_\borel\_sample\_boundSum\_algos\UnitTest1.cs" />
     <Compile Include="dist_\borel\_sample\_constrained\_boundSum\_algos\UnitTest1.cs" />
+    <Compile Include="dist_\borel_\boundaried\survey_\counted_\aim_\avgs\UnitTest1.cs" />
+    <Compile Include="dist_\borel_\boundaried\survey_\counted_\aim_\avg_\UnitTest1.cs" />
+    <Compile Include="dist_\borel_\pdf_\beta_\general\forMany\UnitTest1.cs" />
     <Compile Include="dist_\borel_\pdf_\beta_\general\UnitTest1.cs" />
     <Compile Include="dist_\borel_\pdf_\beta_\pert\UnitTest1.cs" />
     <Compile Include="dist_\borel_\pdf_\normal\fit_\parsUnknown\UnitTest1.cs" />
@@ -348,6 +360,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\sample_\" />
+    <Folder Include="dist_\borel_\boundaried\sample_\counted_\aim_\avg\" />
+    <Folder Include="dist_\borel_\boundaried\sample_\counted_\aim_\avg_\" />
     <Folder Include="dist_\borel_\pdf_\normal\estimate_\" />
     <Folder Include="dist_\borel_\pdf_\uniform_\prob\of_\" />
     <Folder Include="dist_\finite_\cmf_\dbl2dbl_\normalize\" />
@@ -393,9 +407,12 @@
     <Error Condition="!Exists('packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets'))" />
     <Error Condition="!Exists('packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Accord.3.8.0\build\Accord.targets'))" />
+    <Error Condition="!Exists('..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets'))" />
   </Target>
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Import Project="packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets" Condition="Exists('packages\MSTest.TestAdapter.3.0.2\build\net462\MSTest.TestAdapter.targets')" />
   <Import Project="packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('packages\Accord.3.8.0\build\Accord.targets')" />
+  <Import Project="..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets" Condition="Exists('..\..\.deps\MSTest.TestAdapter.3.0.4\build\net462\MSTest.TestAdapter.targets')" />
 </Project>

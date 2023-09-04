@@ -71,7 +71,7 @@ namespace nilnul._stat_._TEST_.dist_.borel_.pdf_.normal_._std_.cdf_.bySeries
 
 		static public void V(double x, double result)
 		{
-			var t = nilnul.stat.dist_.borel_.pdf_.normal_._std_.cdf_.bySeries_.Calculi8partwise4dbl.OfThousandth();
+			var t = nilnul.stat.dist_.borel_.pdfable_.normal_._std_.cdf_.bySeries_.Calculi8partwise4dbl.OfThousandth();
 
 			var calced = t._op_0ext(x);
 			Assert.IsTrue(

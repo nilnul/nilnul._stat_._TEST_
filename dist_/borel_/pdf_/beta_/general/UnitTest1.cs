@@ -15,7 +15,7 @@ namespace nilnul._stat_._TEST_.dist_.borel_.beta_.general
 
 			var mode = 93;
 
-			var dist = new nilnul.stat.dist_.borel_.pdf_.beta_.Pert4dbl(85, 93, 100);
+			var dist = new nilnul.stat.dist_.borel_.pdfable_.beta_.Pert4dbl(85, 93, 100);
 
 			var sampled1= dist.inverseCdf();
 
